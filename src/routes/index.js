@@ -7,7 +7,6 @@ import {
 }from 'react-router-dom';
 import Home from './home';
 import WinnerFilm from '../components/winnerFilm'
-import FavouriteFilm from '../components/favouriteFilm'
 import './routes.scss'
 
 
