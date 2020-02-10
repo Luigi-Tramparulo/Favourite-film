@@ -1,9 +1,13 @@
 import React from 'react'
 import VoteFilm from '../components/voteFilm'
+import FilmRender from '../components/film/index'
 
 const Home = () => {
     return (
-        <VoteFilm />
+        <React.Fragment>
+            <VoteFilm />
+            <FilmRender />
+        </React.Fragment>
     )
 }
 

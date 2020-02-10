@@ -1,0 +1,18 @@
+.film-container{
+    display: flex;
+    max-height: 30%;
+    justify-content: center;
+
+    & > div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        margin: 0.75rem;
+
+        & > h3 {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    }
+}

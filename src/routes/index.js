@@ -4,44 +4,45 @@ import {
     Switch,
     Route,
     Link
-}from 'react-router-dom';
+} from 'react-router-dom';
 import Home from './home';
 import WinnerFilm from '../components/winnerFilm'
 import './routes.scss'
 
-
 class Routes extends Component {
     render() {
-        return (          
+        return (
             <Router>
-                    <div className="nav-bar">
-                        <nav>
-                            <ul className="nav-link">
-                                <li>
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link to="/winner">Il film più votato</Link>
-                                </li>
-                            </ul>
-                        </nav>
-                        </div>
+                <div className="nav-bar">
+                    <nav>
+                        <ul className="nav-link">
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                |
+                            </li>
+                            <li>
+                                <Link to="/winner">Il film più votato</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
                 <Switch>
-                    <Route 
-                    exact
-                    path="/"
-                    component={Home}
-                    >  
+                    <Route
+                        exact
+                        path="/"
+                        component={Home}
+                    >
                     </Route>
-                    <Route 
-                    exact
-                    path="/winner"
-                    component={WinnerFilm}
-                    >                   
+                    <Route
+                        exact
+                        path="/winner"
+                        component={WinnerFilm}
+                    >
                     </Route>
                 </Switch>
-            </Router>   
-
+            </Router>
         )
     }
 }

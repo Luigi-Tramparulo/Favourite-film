@@ -1,44 +1,48 @@
 import React, { Component } from 'react'
-import PieChart from 'react-minimal-pie-chart';
-import {connect} from 'react-redux'
-import './favouriteFilm.scss'  
+import PieChart from 'react-minimal-pie-chart'
+import { connect } from 'react-redux'
+import './favouriteFilm.scss'
+class FavouriteFilm extends Component {
 
-
-class FavouriteFilm extends Component {  
-
- 
     render() {
-               
-        return (
-            <PieChart
-                data={[
-                    { title: 'Il gladiatore', value: this.props.ilgladiatorevote, color: '#E38627'},
-                    { title: 'Una settimana da Dio', value: this.props.unasettimanadadiovote, color: '#C13C37' },
-                    { title: 'VanHelsing', value: this.props.vanhelsingvote, color: '#6A2135' },
-                ]}
+        const dataChart = [
+            { title: 'Il gladiatore', value: this.props.ilgladiatorevote, color: '#E38627', dataIndex:0 },
+            { title: 'Una settimana da Dio', value: this.props.unasettimanadadiovote, color: '#C13C37', dataIndex: 1 },
+            { title: 'VanHelsing', value: this.props.vanhelsingvote, color: '#6A2135', dataIndex: 3 },
+        ]
 
-                style={{
-                    height: '300px'
-                  }} 
-                  
-                  label                             
-                  labelStyle={{
-                    fill: 'white',
-                    fontFamily: 'sans-serif',
-                    fontSize: '10px'
-                  }}
-               
-            />
+        return (
+            <div className="pie-chart">
+                <PieChart
+                    animate
+                    animationDuration={1000}
+                    animationEasing="ease-out"
+                    data={dataChart}
+
+                    style={{
+                        height: '300px'
+                    }}
+
+                    label
+                    labelStyle={{
+                        fill: 'white',
+                        fontFamily: 'sans-serif',
+                        fontSize: '8px'
+                    }}
+                />
+                <h3>Il totale dei voti è : {`${this.props.totalvote}`}</h3>
+            </div>
 
         )
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    return{        
+const mapStateToProps = (state) => {
+    return {
         ilgladiatorevote: state.film.ilgladiatore,
         unasettimanadadiovote: state.film.unasettimanadadio,
-        vanhelsingvote: state.film.vanhelsing,    
+        vanhelsingvote: state.film.vanhelsing,
+        totalvote: state.film.total
     }
 }
 

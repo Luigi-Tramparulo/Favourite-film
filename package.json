@@ -6,6 +6,11 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.0",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
@@ -46,6 +51,9 @@
     "@storybook/addon-links": "^5.3.9",
     "@storybook/addons": "^5.3.9",
     "@storybook/preset-create-react-app": "^1.5.2",
-    "@storybook/react": "^5.3.9"
+    "@storybook/react": "^5.3.9",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5"
   }
 }

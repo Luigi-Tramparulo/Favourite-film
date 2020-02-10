@@ -13,7 +13,7 @@ const WinnerFilm = (props) =>{
             <FavouriteFilm 
             gladiatoreVotes={ilgladiatorevote} 
             unasettimanadadioVotes={unasettimanadadiovote}
-            vanhelsingVotes={vanhelsingvote} 
+            vanhelsingVotes={vanhelsingvote}             
             />
         </div>
     )
@@ -23,6 +23,7 @@ const sortWinnerFilm = (obj) =>{
 
     let sortable = []
     for (let film in obj) {
+        if(film !== 'total')
         sortable.push([film, obj[film]]);
     }
     sortable.sort(function(a, b) {
@@ -39,7 +40,7 @@ const mapStateToProps = (state, ownProps) => {
         film: sortWinnerFilm(state.film), 
         ilgladiatorevote: state.film.ilgladiatore,
         unasettimanadadiovote: state.film.unasettimanadadio,
-        vanhelsingvote: state.film.vanhelsing,    
+        vanhelsingvote: state.film.vanhelsing,          
     }
 }
 

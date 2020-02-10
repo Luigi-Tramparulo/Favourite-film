@@ -2,12 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    & > h1,div{
-        margin: 1.5rem;
-    }
-.title-winner{
-    text-align: center;
-    font-weight: bold;
-    color: white;
-}
+        & > h1,div{
+            margin: 1.5rem;
+        }
+        .title-winner{
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
 }
