@@ -1,5 +1,5 @@
 import React from 'react'
-import VoteFilm from '../components/voteFilm/voteFilm.js'
+import VoteFilm from '../components/voteFilm'
 import FilmRender from '../components/film/index'
 import Footer from '../components/footer'
 
